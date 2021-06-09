@@ -29,7 +29,7 @@ bot.on('message', (msg) => {
 	if (msg.mentions.has(bot.user) && !msg.content.includes("[anonyme]"))
 		msg.channel.send("usage : [anonyme] *votre message*");
 
-		if (msg.content.includes("[anonyme]"))
+	if (msg.content.includes("[anonyme]"))
 	{
 		time = timeNow();
 		logs = tmp = msg.content;
