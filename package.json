@@ -4,12 +4,12 @@
 	"description": "Messager anonyme sur Altica.",
 	"main": "bot.js",
 	"engines": {
-	  "node": "13.x",
-	  "npm": "*"
+		"node": "13.x",
+		"npm": "*"
 	},
 	"scripts": {
-	  "test": "echo \"Error: no test specified\" && exit 1",
-	  "start": "node bot.js"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node bot.js"
 	},
 	"author": "Koda",
 	"dependencies": {

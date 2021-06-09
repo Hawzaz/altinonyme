@@ -16,14 +16,20 @@ var time;
 var tmp;
 var logs;
 
+
+
 bot.on('ready', () => {
 	console.log('Connected and ready.');
 });
 
 bot.on('message', (msg) => {
+
 	if (msg.author.bot) return;
 
-	if (msg.content.includes("[anonyme]"))
+	if (msg.mentions.has(bot.user) && !msg.content.includes("[anonyme]"))
+		msg.channel.send("usage : [anonyme] *votre message*");
+
+		if (msg.content.includes("[anonyme]"))
 	{
 		time = timeNow();
 		logs = tmp = msg.content;
