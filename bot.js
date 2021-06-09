@@ -28,7 +28,7 @@ bot.on('ready', () => {
 bot.on('message', (msg) => {
 
     if (msg.author.bot) return;
-
+	if (config.onlyInChannels !== undefined && config.onlyInChannels.length > 0 && config.onlyInChannels.indexOf(msg.channel.id.toString()) === -1) return;
     if (msg.mentions.has(bot.user) && !msg.content.includes("[anonyme]"))
         msg.channel.send("usage : [anonyme] *votre message*");
 
